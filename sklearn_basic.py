@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 # Import the dataset
-dataset = pandas.read_csv('salaryData.csv')
+dataset = pandas.read_csv('salary_Data.csv')
 x = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, 1].values
 
@@ -41,8 +41,3 @@ plot.title('Salary vs Experience (Test set)')
 plot.xlabel('Years of Experience')
 plot.ylabel('Salary')
 plot.show()
-
-# How to split your dataset to train and test datasets using SciKit Learn
-# https://medium.com/@contactsunny/how-to-split-your-dataset-to-train-and-test-datasets-using-scikit-learn-e7cf6eb5e0d
-from sklearn.model_selection import train_test_split
-xTrain, xTest, yTrain, yTest = train_test_split(x, y, test_size = 0.2, random_state = 0)
