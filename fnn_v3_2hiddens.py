@@ -1,4 +1,3 @@
-# Rohitash Chandra, 2017 c.rohitash@gmail.conm
 
 #!/usr/bin/python
 
