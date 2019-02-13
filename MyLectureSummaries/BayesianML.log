@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2014.3.19)  13 FEB 2019 21:41
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2014.3.19)  14 FEB 2019 00:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -456,26 +456,29 @@ LaTeX Info: Redefining \nameref on input line 61.
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-[1] [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
+[1] [2] [3]
+Overfull \hbox (10.1585pt too wide) in paragraph at lines 203--204
+[]\T1/anttl/m/n/10.95 For a new ob-ject pre-dict com-pute av-er-age pre-dic-tio
+n of CNNs with weights $\OML/anttl/m/it/10.95 w[]; w[]; \OMS/anttl/m/n/10.95 ^^
+A\OML/anttl/m/it/10.95 ; w[]$\T1/anttl/m/n/10.95 . 
+ []
 
 [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 208.
  (./BayesianML.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 176.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 176.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 208.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 208.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
  ) 
 Here is how much of TeX's memory you used:
  9719 strings out of 493938
  132866 string characters out of 6148857
- 208203 words of memory out of 5000000
+ 198203 words of memory out of 5000000
  12782 multiletter control sequences out of 15000+600000
  72561 words of font info for 65 fonts, out of 8000000 for 9000
  1305 hyphenation exceptions out of 8191
- 34i,11n,45p,9206b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,45p,3066b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on BayesianML.pdf (4 pages).
+Output written on BayesianML.pdf (5 pages).

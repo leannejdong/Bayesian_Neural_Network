@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1550054480 "BayesianML.tex" "BayesianML.pdf" "BayesianML" 1550054482
+["pdflatex"] 1550063281 "BayesianML.tex" "BayesianML.pdf" "BayesianML" 1550063283
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1136768653 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
@@ -73,11 +73,11 @@
   "/usr/local/texlive/2013/texmf-dist/web2c/texmf.cnf" 1366045088 31707 0953c15448e216a6585e92ee639d2dc2 ""
   "/usr/local/texlive/2013/texmf-var/web2c/xetex/xelatex.fmt" 1395149418 3164673 ab25d31e3d2908adb93756f0b5b1cc54 ""
   "/usr/local/texlive/2013/texmf.cnf" 1369923207 577 cbc827f6294276973a1952e86e8ad73a ""
-  "BayesianML.aux" 1550054481 1868 8102eaa5f82e07bf96bde35da109fdfe ""
-  "BayesianML.out" 1550054481 643 00fbf8cc92804ce53acddaa69a2f3132 ""
-  "BayesianML.tex" 1550054480 15008 c3f0c4c53aaca97665597b3b61f70874 ""
+  "BayesianML.aux" 1550063282 1868 8102eaa5f82e07bf96bde35da109fdfe ""
+  "BayesianML.out" 1550063282 643 00fbf8cc92804ce53acddaa69a2f3132 ""
+  "BayesianML.tex" 1550063280 16003 d428b98e326af1bfd78d0383613695e0 ""
   (generated)
-  "BayesianML.log"
-  "BayesianML.pdf"
   "BayesianML.out"
+  "BayesianML.log"
   "BayesianML.aux"
+  "BayesianML.pdf"
