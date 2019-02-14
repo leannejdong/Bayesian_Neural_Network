@@ -391,12 +391,18 @@ Here are some {\color{red}Opposing forces}
 	\item But then acceptance probability is often low.
 \end{itemize}
 \subsection{Example of Metropolis-Hastings}
-
+Here we sample from 
+\begin{align*}
+	Q(x\to x')=\mathcal{N}(x,1)
+\end{align*}
 \begin{align*}
 	A(x\to x')=\text{min}\left(1,\frac{\pi(x')Q(x'\to x)}{\pi(x)Q(x\to x')}\right)
 	=\text{min}\left(1,\frac{\pi(x')}{\pi(x)}\right)
 \end{align*}
 
+\begin{align*}
+	A(x\to x')=\text{min}\left(1,\frac{0.27}{0.07}\right)=\text{min}(1,3.87)
+\end{align*}
 \subsection{MCMC summary}
 \section{Bayesian Neural Network}
  
