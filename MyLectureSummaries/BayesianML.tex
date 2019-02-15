@@ -403,7 +403,33 @@ Here we sample from
 \begin{align*}
 	A(x\to x')=\text{min}\left(1,\frac{0.27}{0.07}\right)=\text{min}(1,3.87)
 \end{align*}
+
+In summary, rejection sampling applied to MCs. Here are some Pros and Cons
+
+\textbf{Pros}
+\begin{itemize}
+	\item You can choose among family of MCs
+	\item Works for unnormalized densities
+	\item Easy to implement
+\end{itemize}
+\textbf{Cons}
+\begin{itemize}
+	\item Samples are still correlated
+	\item Have to choose among family of MCs
+\end{itemize}
 \subsection{MCMC summary}
+\textbf{Pros}
+\begin{itemize}
+	\item Easy to implement
+	\item Easy to parallelize
+	\item Unbiased estimates (wait more, more accuracy)
+\end{itemize}
+\textbf{Cons}
+\begin{itemize}
+	\item Usually slower than alternatives
+\end{itemize}
+
+\section{MCMC for LDA}
 \section{Bayesian Neural Network}
  
 Let's discuss how can we apply Markov chain Monte Carlo to Bayesian Neural Networks. Essentially, BNN  is your usual neural network, and it has weights on each $h$, right? So each connection has some weights which would train during basically fitting our neural network into data. Basing neural networks instead of weights, they have distributions and weights. So we treat $w$, the weights, as a latent variable, and then to do predictions, we marginalize w out. And this way, instead of just hard set failure for W11 like three, we'll have a distribution on w in posterior distribution which we'll use to obtain the predictions. And so, to make a prediction for new data object x or and though using the training data set of objects $X_\text{train}$ and $Y_\text{train}$, we do the following. We say that this thing equals to integral where we marginalize our w. So we consider all possible values for the weights w, and we average the predictions with the respect to them. So here you have $p$ of $y$ given $x$ and $w$, is your usual neural network output. So, you have your image $x$, for example, and you pass it through your neural network with parameters $w$. And then you record these predictions. And you do that for all possible values for the parameters $w$. So there are infinitely many values for $W$, and for each of them you pass your image through the corresponding neural network, and write down the prediction. And then you average all these predictions with weights, where weights are the posterior distribution on $w$, which basically says us, how probable is that these particular w was according to the training data set. So, you have kind of an infinitely large ensemble of neural networks with all possible weights, and with basically importance being proportional to the posterior distribution w. And this is full base in inference applied in neural networks, and this way we can get some benefits from probablistic programming in neural networks. So again, estimate uncertainty, we may tune some hyperparameters naturally and stuff like that. And so we may notice here that this prediction, this integral, equals to an expected value of your output from your neural network, with respect to the posterior distribution w. So, basically it's an expected output of your neural network with weights defined by the posterior.

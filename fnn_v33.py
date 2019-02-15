@@ -1,6 +1,6 @@
 # Rohitash Chandra, 2017 c.rohitash@gmail.conm
 
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # ref: http://iamtrask.github.io/2015/07/12/basic-python-network/  
  
@@ -16,7 +16,7 @@
 #vW(t+1) = momentum.*Vw(t) - scaling .* gradient_F( W(t) + momentum.*vW(t) )
 #W(t+1) = W(t) + vW(t+1)
 
-#http://jmlr.org/proceedings/papers/v28/sutskever13.pdf
+# http://jmlr.org/proceedings/papers/v28/sutskever13.pdf
  
 
 # Numpy used: http://cs231n.github.io/python-numpy-tutorial/#numpy-arrays
@@ -127,7 +127,7 @@ class Network:
         self.B1 = self.BestB1
         self.B2 = self.BestB2 #load best knowledge
      
-        for s in xrange(0, testSize):
+        for s in range(0, testSize):
                   
                 Input[:]  =   Data[s,0:self.Top[0]] 
                 Desired[:] =  Data[s,self.Top[0]:] 
@@ -162,7 +162,7 @@ class Network:
         while  epoch < self.Max and bestTrain < self.minPerf :
            
             sse = 0
-            for s in xrange(0, self.NumSamples):
+            for s in range(0, self.NumSamples):
                  
                 if(stocastic):
                    pat = random.randint(0, self.NumSamples-1) 
@@ -225,8 +225,8 @@ def main():
            
 
         if problem == 2:
-           TrainData = np.loadtxt("4bit.csv", delimiter=',') #  4-bit parity problem
-           TestData = np.loadtxt("4bit.csv", delimiter=',') #  
+           TrainData = np.loadtxt("Datasets/4bit.csv", delimiter=',') #  4-bit parity problem
+           TestData = np.loadtxt("Datasets/4bit.csv", delimiter=',') #
            Hidden = 4
            Input = 4
            Output = 1
@@ -275,7 +275,7 @@ def main():
         Epochs =  np.zeros(MaxRun)
         Time =  np.zeros(MaxRun)
 
-        for run in xrange(0, MaxRun  ): 
+        for run in range(0, MaxRun  ):
                  #print run
                  fnnSGD = Network(Topo, TrainData, TestData, MaxTime, TrSamples, MinCriteria) # Stocastic GD
                  start_time=time.time()
