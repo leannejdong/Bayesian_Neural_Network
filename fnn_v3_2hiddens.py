@@ -257,8 +257,8 @@ def main():
            
 
         if problem == 2:
-           TrainData = np.loadtxt("4bit.csv", delimiter=',') #  4-bit parity problem
-           TestData = np.loadtxt("4bit.csv", delimiter=',') #  
+           TrainData = np.loadtxt("Datasets/4bit.csv", delimiter=',') #  4-bit parity problem
+           TestData = np.loadtxt("Datasets/4bit.csv", delimiter=',') #
            Hidden1 = 3
            Hidden2 = 3
            Input = 4
@@ -308,8 +308,8 @@ def main():
         Epochs =  np.zeros(MaxRun)
         Time =  np.zeros(MaxRun)
 
-        for run in xrange(0, MaxRun  ): 
-                 print run
+        for run in range(0, MaxRun  ):
+                 print(run)
                  fnnSGD = Network(Topo, TrainData, TestData, MaxTime, TrSamples, MinCriteria) # Stocastic GD
                  start_time=time.time()
                  (erEp,  trainMSE[run] , trainPerf[run] , Epochs[run]) = fnnSGD.BP_GD(learnRate, mRate, useNestmomen,  useStocasticGD, useVanilla)   
