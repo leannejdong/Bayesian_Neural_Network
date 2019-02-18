@@ -264,7 +264,7 @@ class MCMC:
 def main():
     outres = open('mcmcresults/resultspriors.txt', 'w')
     for problem in range(2, 3):
-        # problem = 7 #  Lazer or Sunspot
+        problem = 2 #  Lazer or Sunspot
 
         hidden = 5
         input = 4  #
