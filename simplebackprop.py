@@ -152,10 +152,6 @@ def main ():
   myNN = NN ( 2, 2, 1)
   myNN.train(pat)
   
-  
-
-
-
 
 
 if __name__ == "__main__":
