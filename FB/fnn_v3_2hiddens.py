@@ -50,26 +50,18 @@ class Network:
         self.W1 = np.random.randn(self.Top[0]  , self.Top[1])  / np.sqrt(self.Top[0] ) 
         self.B1 = np.random.randn(1  , self.Top[1])  / np.sqrt(self.Top[1] ) # bias first layer
         self.BestB1 = self.B1
-        print(self.BestB1, 'B1')
-        self.BestW1 = self.W1 
-        print(self.BestW1,'W1')
+        self.BestW1 = self.W1
         self.W2 = np.random.randn(self.Top[1] , self.Top[2]) / np.sqrt(self.Top[1] )
         self.B2 = np.random.randn(1  , self.Top[2])  / np.sqrt(self.Top[1] ) # bias second layer
         self.BestB2 = self.B2
-        print(self.BestB2,'B2')
 
         self.BestW2 = self.W2 
-        print(self.BestW2,'W2')
         self.W3 = np.random.randn(self.Top[2] , self.Top[3]) / np.sqrt(self.Top[2] )
         self.B3 = np.random.randn(1  , self.Top[3])  / np.sqrt(self.Top[2] ) # bias second layer
         self.BestB3 = self.B3
-        print(self.BestB3,'B3')
-        self.BestW3 = self.W3 
-        print(self.BestW3,'W3')
+        self.BestW3 = self.W3
         self.hidout1 = np.zeros((1, self.Top[1] )) # output of first hidden layer
-        print(self.hidout1)
         self.hidout2 = np.zeros((1, self.Top[2] )) # output of 2nd hidden layer
-        print(self.hidout2)
         self.out = np.zeros((1, self.Top[3])) #  output last layer
 
   
@@ -87,27 +79,16 @@ class Network:
          self.hidout1 = self.sigmoid(z1) # output of first hidden layer   
          z2 = self.hidout1.dot(self.W2)  - self.B2 
          self.hidout2 = self.sigmoid(z2)  # output second hidden layer
-         print(self.hidout2, 'selfhidout2')
          z3 = self.hidout2.dot(self.W3) - self.B3
          self.out = self.sigmoid(z3)
-         print(self.out,'selfout')
-         print(X,'X')
     # test forward pass
     #self.W1[0,0]=1.1
     #self.W1[0,1]=0.1
   
     def BackwardPassMomentum(self, Input, desired, vanilla):
             out_delta = (desired - self.out)*(self.out*(1-self.out))
-            xx = np.ones(3)
-            print(out_delta,'outdel')
-            print(self.hidout2, 'houtput')
-            vv = (self.hidout2 * (xx-self.hidout2))
-            print(vv, 'vv')
-            hid_delta2 = np.dot(out_delta, self.W3.T) * vv
-            print((xx-self.hidout2),'test1')
-            print(hid_delta2,'hidel2')
-            hid_delta1 = hid_delta2.dot(self.W2.T) * (self.hidout1 * (np.ones(3)-self.hidout1))
-            print(hid_delta1, 'hidel1')
+            hid_delta2 = np.dot(out_delta, self.W3.T) * (self.hidout2 * (np.ones(4)-self.hidout2))
+            hid_delta1 = hid_delta2.dot(self.W2.T) * (self.hidout1 * (np.ones(4)-self.hidout1))
 
             if vanilla == 1: #no momentum 
                 self.W3 += (self.hidout2.T.dot(out_delta)*self.lrate)
@@ -243,8 +224,8 @@ def main():
         
 
         if problem == 1:
-           TrDat  = np.loadtxt("train.csv", delimiter=',') #  Iris classification problem (UCI dataset)
-           TesDat  = np.loadtxt("test.csv", delimiter=',') #  
+           TrDat  = np.loadtxt("Datasets/iris_train.csv", delimiter=',') #  Iris classification problem (UCI dataset)
+           TesDat = np.loadtxt("Datasets/iris_test.csv", delimiter=',') #
            Hidden1 = 6
            Hidden2 = 6
            Input = 4
@@ -263,8 +244,8 @@ def main():
         if problem == 2:
            TrainData = np.loadtxt("Datasets/4bit.csv", delimiter=',') #  4-bit parity problem
            TestData = np.loadtxt("Datasets/4bit.csv", delimiter=',') #
-           Hidden1 = 3
-           Hidden2 = 3
+           Hidden1 = 4
+           Hidden2 = 4
            Input = 4
            Output = 1
            TrSamples =  16
@@ -276,14 +257,16 @@ def main():
         if problem == 3:
            TrainData = np.loadtxt("xor.csv", delimiter=',') #  4-bit parity problem
            TestData = np.loadtxt("xor.csv", delimiter=',') #  
-           Hidden = 3
+           Hidden1 = 3
+           Hidden2 = 3
            Input = 2
            Output = 1
            TrSamples =  4
            TestSize = 4
            learnRate = 0.9 
            mRate = 0.01
-           MaxTime = 500 
+           MaxTime = 500
+
 
         #print(TrainData)
 
@@ -318,7 +301,7 @@ def main():
                  start_time=time.time()
                  (erEp,  trainMSE[run] , trainPerf[run] , Epochs[run]) = fnnSGD.BP_GD(learnRate, mRate, useNestmomen,  useStocasticGD, useVanilla)   
 
-                 Time[run]  =time.time()-start_time
+                 Time[run] = time.time()-start_time
                  (testMSE[run], testPerf[run]) = fnnSGD.TestNetwork(TestData, TestSize, testTolerance)
                 
        	print('trainPerf',trainPerf)
@@ -337,7 +320,7 @@ def main():
         plt.figure()
         plt.plot(erEp )
         plt.ylabel('error')  
-        plt.savefig('out.png')
+        plt.savefig('BPresults_4bits/out_2hlayers.png')
        
  
 if __name__ == "__main__": main()

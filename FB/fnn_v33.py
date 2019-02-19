@@ -206,12 +206,12 @@ def normalisedata(data, inputsize, outsize): # normalise the data between [0,1]
 def main(): 
           
     
-        problem = 2 # [1,2,3] choose your problem (Iris classfication or 4-bit parity or XOR gate)
+        problem = 1 # [1,2,3] choose your problem (Iris classfication or 4-bit parity or XOR gate)
         
 
         if problem == 1:
-           TrDat  = np.loadtxt("train.csv", delimiter=',') #  Iris classification problem (UCI dataset)
-           TesDat  = np.loadtxt("test.csv", delimiter=',') #  
+           TrDat  = np.loadtxt("Datasets/iris_train.csv", delimiter=',') #  Iris classification problem (UCI dataset)
+           TesDat  = np.loadtxt("Datasets/iris_test.csv", delimiter=',') #
            Hidden = 6
            Input = 4
            Output = 2

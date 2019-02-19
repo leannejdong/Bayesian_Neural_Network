@@ -1,0 +1,97 @@
+\documentclass[11pt, oneside, reqno]{amsart}
+\usepackage{fullpage}
+\usepackage{amssymb,latexsym,amsmath,verbatim,layout,hyperref,amsthm,color}  
+\numberwithin{equation}{section}
+\usepackage[T1]{fontenc}
+\usepackage[light,math]{anttor}
+\usepackage {mathrsfs}
+%\DeclareGraphicsExtensions{.pdf,.png,.jpg}                 
+\DeclareMathOperator*{\esssup}{ess\,sup}     
+% AMS Theorems  
+\theoremstyle{plain}% default
+%\newtheorem{name}[counter]{text}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{q}{Question}
+\newtheorem*{ans}{Answer}
+\newtheorem*{cor}{Corollary}
+
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{exmp}[thm]{Example}
+
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
+\newtheorem{ex}{Exercise}
+\newtheorem{eg}{Example}
+\usepackage{hyperref}
+\def\ci{\perp\!\!\!\perp}
+\newcommand*{\bigchi}{\mbox{\Large$\chi$}} 
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+
+\newcommand{\e}{\mathbf{e}} 
+    
+
+\newcommand{\vgrad}{\mathbf{\nabla}}     
+\newcommand{\vlap}{\mathbf{\Delta}}     
+\newcommand{\sph}{\mathbb{S}}
+%	x=  x,\quad  u,\quad \vgrad,\quad \vlap,\quad \sph
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\mb}[1]{\mathbf {#1}}
+\newcommand{\D}[2]{\frac{\partial #1}{\partial #2}} 
+\newcommand{\DD}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
+%\renewcommand{\vec}[1]{\mathbf{#1}}%
+\newcommand{\pa}[1]{\partial {#1_{\sub{#1}}}}    
+\newcommand\relphantom[1]{\mathrel{\plantom{#1}}}    
+\title{Neural Network: Assignments}
+\author{Leanne Dong (CTDS)
+}
+\date{\today}
+\begin{document}
+	\maketitle
+\section{Assignment 1}
+\subsection{4bit dataset with an additional layer}
+
+With topology $[4,4,1]$ over 10 trials:
+
+total training $+$ eval time: 19.50439286 sec
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{ |c|c|c|} 
+\hline
+ & train & test  \\ 
+ \hline\hline
+MSE & 0.0011 & 0.0012  \\ 
+Epochs & 1700 & 1800  \\ 
+ Time & 19 & 20\\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{ |c|c|c|} 
+\hline
+ & mean & sdtc  \\ 
+ \hline\hline
+trainPerf & 93.125 & 12.327  \\ 
+testPerf & 98.75 & 2.5  \\ 
+ Time & 1.95 & 0.53\\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}  
+\end{document}

@@ -160,7 +160,7 @@ class MCMC:
         w = np.random.randn(w_size)
         w_proposal = np.random.randn(w_size)
 
-        step_w = 0.02;  # defines how much variation you need in changes to w
+        step_w = 0.05;  # defines how much variation you need in changes to w
         step_eta = 0.01;
         # --------------------- Declare FNN and initialize
 
