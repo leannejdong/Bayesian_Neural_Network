@@ -56,17 +56,60 @@
 \newcommand{\pa}[1]{\partial {#1_{\sub{#1}}}}    
 \newcommand\relphantom[1]{\mathrel{\plantom{#1}}}    
 \title{Neural Network: Assignments}
-\author{Leanne Dong (CTDS)
+\author{Leanne Dong
 }
 \date{\today}
 \begin{document}
 	\maketitle
-\section{Assignment 1}
+\section{Assignment 1: Backpropagation}
 \subsection{4bit dataset with an additional layer}
+I designed my code to accommodate one extra layer. The particular parameter choices follow Rohit's code. I suspect I will get a better performance with a higher learn rate and a lower MSE tolderance rate.
+\\
 
 With topology $[4,4,1]$ over 10 trials:
 
-total training $+$ eval time: 19.50439286 sec
+total training $+$ eval time: $20.59$ sec
+
+Performance: MSE (test) $= 0.014$, accuracy $= 98.75\%$
+\\
+
+With  topoloogy $[4,4,4,1]$ over 10 trials:
+
+total training $+$ eval time: $31.63$ sec
+
+Performance: MSE (test) $= 0.0017$, accuracy $= 99.375\%$
+
+\subsection{Iris dataset with an additional layer}
+
+I have chosen to add only one layer.
+
+With topology $[4,4,2]$ over 10 trials:
+
+total training $+$ eval time: $30.56$ sec
+
+Performance: MSE (test) $= 0.03$, accuracy $= 95.75\%$
+\\
+
+With  topoloogy $[4,4,4,2]$ over 10 trials:
+
+total training $+$ eval time: $31.61$ sec
+
+Performance: MSE (test) $= 0.0093$, accuracy $= 94.75\%$
+
+The results do not seem dramatically different by adding more layers.
+
+\section{Assignment 2: SGD vs MCMC}
+Here we will compare the performance of MCMC-SGD with one and two hidden layers on the Sunspot data set.
+
+Then we will compare the performance of MCC FNN subjects to variation of step size and sample size.
+
+\section{SDG with one hidden layer}
+I follow the parameters Rohit has chosen. With 10 test instances, the test MSE is about $0.028$ with Stdv $0.0018$.
+
+\section{SDG with one hidden layer}
+There is no significant different found with added layer.
+
+\begin{comment}
 \begin{table}[ht]
 \begin{center}
 \begin{tabular}{ |c|c|c|} 
@@ -94,4 +137,5 @@ testPerf & 98.75 & 2.5  \\
 \end{tabular}
 \end{center}
 \end{table}  
+\end{comment}
 \end{document}

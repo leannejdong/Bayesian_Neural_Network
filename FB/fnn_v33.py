@@ -17,10 +17,10 @@
 #W(t+1) = W(t) + vW(t+1)
 
 # http://jmlr.org/proceedings/papers/v28/sutskever13.pdf
- 
-
 # Numpy used: http://cs231n.github.io/python-numpy-tutorial/#numpy-arrays
- 
+# choose the correct directory to save output wrt the correct problem (iris, 4 bits)
+#plt.savefig('BPresults_iris/out.png')
+#plt.savefig('BPresults_4bits/out.png')
 
  
 
@@ -206,7 +206,7 @@ def normalisedata(data, inputsize, outsize): # normalise the data between [0,1]
 def main(): 
           
     
-        problem = 1 # [1,2,3] choose your problem (Iris classfication or 4-bit parity or XOR gate)
+        problem = 5 # [1,2,3] choose your problem (Iris classfication or 4-bit parity or XOR gate)
         
 
         if problem == 1:
@@ -250,13 +250,40 @@ def main():
            mRate = 0.01
            MaxTime = 500 
 
+
+        if problem == 4:
+           TrainData = np.loadtxt("Datasets/spam_train.csv", delimiter=',') #  4-bit parity problem
+           TestData = np.loadtxt("Datasets/spam_test.csv", delimiter=',') #  
+           print(TrainData)
+           Hidden = 3
+           Input = 2
+           Output = 1
+           TrSamples =  TrainData.shape[0]
+           TestSize = 4
+           learnRate = 0.9 
+           mRate = 0.01
+           MaxTime = 500 
+
+        if problem == 5:
+           TrainData = np.loadtxt("Datasets/Train.csv", delimiter=',') #  4-bit parity problem
+           TestData = np.loadtxt("Datasets/TestX.csv", delimiter=',') #  
+           print(TrainData)
+           Hidden = 3
+           Input = 2
+           Output = 1
+           TrSamples =  TrainData.shape[0]
+           TestSize = 4
+           learnRate = 0.9 
+           mRate = 0.01
+           MaxTime = 500 
+
         print(TrainData)
 
  
     
 
         Topo = [Input, Hidden, Output] 
-        MaxRun = 10 # number of experimental runs 
+        MaxRun = 10 # number of experimental runs
          
         MinCriteria = 95 #stop when learn 95 percent
         
@@ -288,19 +315,24 @@ def main():
                 
         print('trainPerf',trainPerf)
         print('testPerf',testPerf)
+        print('mean_trainPerf', np.mean(trainPerf))
+        print('mean_testPerf', np.mean(testPerf))
         print('trainMSE',trainMSE)
         print('testMSE',testMSE)
+        print('mean_trainMSE', np.mean(trainMSE))
+        print('mean_testMSE', np.mean(testMSE))
 
         print('Epochs',Epochs)
         print('Time',Time)
         print(np.mean(trainPerf), np.std(trainPerf))
         print(np.mean(testPerf), np.std(testPerf))
         print(np.mean(Time), np.std(Time))
+        print(np.sum(Time))
                
         plt.figure()
         plt.plot(erEp )
         plt.ylabel('error')  
-        plt.savefig('out.png')
+        plt.savefig('BPresults_4bits/out.png')
        
  
 if __name__ == "__main__": main()

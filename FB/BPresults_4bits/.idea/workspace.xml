@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a6d2c7d-6cd1-401e-86c6-8351116cb326" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Datasets/4bit.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Datasets/iris.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fnn_v3_2hiddens.py" beforeDir="false" afterPath="$PROJECT_DIR$/../fnn_v3_2hiddens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out_iris.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MCMC/mcmc_fnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../MCMC/mcmc_fnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/forestfires.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/forestfires.names" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/iris.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/iris.names" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/iris_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/iris_train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/wine.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../datasets/wine.names" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../out.png" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="332" />
+    <option name="y" value="24" />
+    <option name="width" value="1108" />
+    <option name="height" value="831" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Course" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="332" y="24" width="1108" height="831" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24931003" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+</project>

@@ -16,10 +16,12 @@
 #W(t+1) = W(t) + vW(t+1)
 
 #http://jmlr.org/proceedings/papers/v28/sutskever13.pdf
- 
 
 # Numpy used: http://cs231n.github.io/python-numpy-tutorial/#numpy-arrays
- 
+# change argument in np.ones() according to the number of neurons in hidden layer
+# choose the correct directory to save output wrt the correct problem (iris, 4 bits)
+#plt.savefig('BPresults_iris/out.png')
+#plt.savefig('BPresults_4bits/out.png')
 
  
 
@@ -154,7 +156,7 @@ class Network:
               if(np.isclose(self.out, Desired, atol=erTolerance).any()):
                  clasPerf =  clasPerf +1  
 
-        return ( sse/testSize, float(clasPerf)/testSize * 100 )
+        return (sse/testSize, float(clasPerf)/testSize * 100 )
 
  
     def saveKnowledge(self):
@@ -306,15 +308,21 @@ def main():
                 
        	print('trainPerf',trainPerf)
         print('testPerf',testPerf)
+        print('mean_trainPerf', np.mean(trainPerf))
+        print('mean_testPerf', np.mean(testPerf))
         print('trainMSE',trainMSE)
         print('testMSE',testMSE)
+        print('mean_trainMSE',np.mean(trainMSE))
+        print('mean_testMSE',np.mean(testMSE))
+        print('total_trainMSE', np.sum(trainMSE))
+        print('total_testMSE', np.sum(testMSE))
 
         print('Epochs',Epochs)
         print('Time',Time)
         print(np.mean(trainPerf), np.std(trainPerf))
         print(np.mean(testPerf), np.std(testPerf))
         print(np.mean(Time), np.std(Time))
-  
+        print(np.sum(Time))
   
          
         plt.figure()
