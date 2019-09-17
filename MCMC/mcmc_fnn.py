@@ -11,10 +11,6 @@
 # based on: https://github.com/rohitash-chandra/FNN_TimeSeries
 # based on: https://github.com/rohitash-chandra/mcmc-randomwalk
 
-
-# Rohitash Chandra (Edited by Leanne), Centre for Translational Data Science
-
-
 # Reference for publication for this code
 # [Chandra_ICONIP2017] R. Chandra, L. Azizi, S. Cripps, 'Bayesian neural learning via Langevin dynamicsfor chaotic time series prediction', ICONIP 2017.
 # (to be addeded on https://www.researchgate.net/profile/Rohitash_Chandra)
